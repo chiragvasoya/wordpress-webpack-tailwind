@@ -16,7 +16,7 @@ function ilc_custom_login() {
 function register_themename_menus(){
 	register_nav_menus(
 		array(
-		'main_nav' => __('Main Navigation'), 
+		'main_nav' => __('Main Navigation'),
 		'left_nav' => __('Left Navigation'),
 		'footer_nav' => __('Footer Navigation'))
 		 );
@@ -25,9 +25,9 @@ add_action( 'init', 'register_themename_menus');
 
 /*************************     Styles and JavaScript files  *********************/
 function themename_enqueue_styles() {
-    wp_enqueue_style( 'bundlecss', get_stylesheet_directory_uri().'/dist/bundle.css'); 
+    wp_enqueue_style( 'bundlecss', get_stylesheet_directory_uri().'/dist/bundle.css');
 }
-add_action( 'wp_enqueue_scripts', 'themename_enqueue_styles' ); 
+add_action( 'wp_enqueue_scripts', 'themename_enqueue_styles' );
 
 function themename_enqueue_scripts() {
     $dependencies = array('jquery');
