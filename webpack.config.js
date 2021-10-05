@@ -49,6 +49,6 @@ module.exports = {
           chunkFilename: '[id].css'
         }), 
         
-      new CleanWebpackPlugin()    
+      new CleanWebpackPlugin()
    ]
 };

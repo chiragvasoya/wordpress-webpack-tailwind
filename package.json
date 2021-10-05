@@ -17,18 +17,18 @@
     "css-loader": "^6.3.0",
     "exports-loader": "^3.0.0",
     "file-loader": "^6.2.0",
-    "image-webpack-loader": "^7.0.1",
+    "image-webpack-loader": "^8.0.1",
     "mini-css-extract-plugin": "^2.3.0",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.1.0",
-    "style-loader": "^3.2.1",
+    "style-loader": "^3.3.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.53.0",
+    "webpack": "^5.57.1",
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "@popperjs/core": "^2.10.1",
-    "bootstrap": "^5.1.1",
+    "@popperjs/core": "^2.10.2",
+    "bootstrap": "^5.1.2",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1"
   }
