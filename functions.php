@@ -44,7 +44,6 @@ if(function_exists('add_theme_support')){
 
 if(function_exists('add_image_size')){
 	add_image_size('slider-image', 768, 255); //adjust name and image size accordingly
-	
 }
 
 ?>
