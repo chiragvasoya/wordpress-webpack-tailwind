@@ -33,7 +33,7 @@ function themename_enqueue_scripts() {
     $dependencies = array('jquery');
     wp_enqueue_script('bundlejs', get_template_directory_uri().'/dist/bundle.js', $dependencies, '', true );
 }
- 
+
 add_action( 'wp_enqueue_scripts', 'themename_enqueue_scripts' );
 
 /***********************   Image Thumbnails       ********************************/

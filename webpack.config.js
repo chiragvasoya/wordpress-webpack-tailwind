@@ -26,15 +26,18 @@ module.exports = {
           
            {
                test: /\.(jpg|png|gif)$/,
-               use: ["file-loader?name=img/[name].[ext]", "image-webpack-loader"]
+               type: 'asset/resource'
+            //    use: ["file-loader?name=img/[name].[ext]", "image-webpack-loader"]
            },
            {
                test: /\.(woff2?|svg)$/,
-               use: ["url-loader?name=fonts/[name].[ext]&limit=10000" ]
+               type: 'asset/resource'
+            //    use: ["url-loader?name=fonts/[name].[ext]&limit=10000" ]
            },
            {
               test: /\.(ttf|eot)$/,
-               use: ["file-loader?name=fonts/[name].[ext]"] 
+              type: 'asset/resource'
+            //    use: ["file-loader?name=fonts/[name].[ext]"] 
            }
        ]
    },
