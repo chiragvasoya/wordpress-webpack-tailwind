@@ -2,8 +2,9 @@ const webpack = require('webpack');
 const path = require('path');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const  { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+
 
 
 module.exports = {
@@ -18,8 +19,9 @@ module.exports = {
                test: /\.(sa|sc|c)ss$/,
                use: [
                 MiniCssExtractPlugin.loader,
+                // 'style-loader',
                 'css-loader',
-                'sass-loader',
+                'postcss-loader',
               ]
               
            },
@@ -27,24 +29,24 @@ module.exports = {
            {
                test: /\.(jpg|png|gif)$/,
                type: 'asset/resource'
-            //    use: ["file-loader?name=img/[name].[ext]", "image-webpack-loader"]
+        
            },
            {
                test: /\.(woff2?|svg)$/,
                type: 'asset/resource'
-            //    use: ["url-loader?name=fonts/[name].[ext]&limit=10000" ]
+           
            },
            {
               test: /\.(ttf|eot)$/,
               type: 'asset/resource'
-            //    use: ["file-loader?name=fonts/[name].[ext]"] 
+  
            }
        ]
    },
    plugins: [
      new BrowserSyncPlugin({
             port: 3000,
-            proxy: 'http://localhost/yourdir/',
+            proxy: 'http://virtualhost:8080',    // virtualhost on server
             files: ['**/*.php']
         }),
         new MiniCssExtractPlugin({

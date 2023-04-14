@@ -4,6 +4,8 @@
 get_template_directory();
 define ('IMAGES', get_stylesheet_directory_uri()."/src/images/");
 
+
+// wordpress login page brand setuo
 add_action( 'login_head', 'ilc_custom_login');
 function ilc_custom_login() {
   echo '<style type="text/css">
@@ -36,14 +38,6 @@ function themename_enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'themename_enqueue_scripts' );
 
-/***********************   Image Thumbnails       ********************************/
-if(function_exists('add_theme_support')){
-	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size(538, 269);
-}
 
-if(function_exists('add_image_size')){
-	add_image_size('slider-image', 768, 255); //adjust name and image size accordingly
-}
 
 ?>
